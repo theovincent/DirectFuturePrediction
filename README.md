@@ -63,3 +63,9 @@ If you use this code or the provided environments in your research, please cite 
 ## Troubleshooting
 
 Please send bug reports to Alexey Dosovitskiy <adosovitskiy@gmail.com>
+
+## To make the GUI app working while the execution happens in the container do the following in your local machine:
+```bash
+xhost +local:docker
+```
+This will allow the docker host to use the GUI of the host machine.
