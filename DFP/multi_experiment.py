@@ -39,15 +39,15 @@ class MultiExperiment:
         # agent_args = my_util.merge_two_dicts(defaults.agent_args, agent_args)
         # experiment_args = my_util.merge_two_dicts(defaults.experiment_args, experiment_args)
 
-        if not (experiment_args["args_file"] is None):
-            print(" ++ Reading arguments from ", experiment_args["args_file"])
-            with open(experiment_args["args_file"], "r") as f:
-                input_args = my_util.json_load_byteified(f)
+        # if not (experiment_args["args_file"] is None):
+        #     print(" ++ Reading arguments from ", experiment_args["args_file"])
+        #     with open(experiment_args["args_file"], "r") as f:
+        #         input_args = my_util.json_load_byteified(f)
 
-            for arg_name, arg_val in input_args.items():
-                print(arg_name, arg_val)
-                for k, v in arg_val.items():
-                    locals()[arg_name][k] = v
+        #     for arg_name, arg_val in input_args.items():
+        #         print(arg_name, arg_val)
+        #         for k, v in arg_val.items():
+        #             locals()[arg_name][k] = v
 
         self.target_maker = FutureTargetMaker(target_maker_args)
         self.results_file = experiment_args["results_file"]
